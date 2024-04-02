@@ -92,5 +92,6 @@ def extract_email_addresses(long_text: str):
     email_adresses = [word for word in divided_text if '@' in word and '.' in word]
     return email_adresses
 
-
-print(extract_email_addresses('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at elit nec nisi lobortis luctus. Ut faucibus, lorem@example.com quis hendrerit lacinia, ipsum odio tristique purus, at suscipit quam felis eu purus. Quisque ac lorem vel ante scelerisque suscipit. Nam eu mauris at leo tristique fermentum. Sed varius libero at eros malesuada, sed venenatis justo mattis. Vestibulum@example.net eu dolor non leo lacinia tincidunt. Fusce tristique lacus nec mauris fermentum, at placerat sapien feugiat. Phasellus@example.org finibus vulputate tellus, nec consectetur risus. Curabitur et ligula et ligula pulvinar varius eget eu arcu. Integer at ligula vitae libero facilisis fermentum. Sed@example.co.uk dapibus malesuada orci, id eleifend purus aliquam eu. Donec condimentum, libero eget interdum consequat, odio justo convallis sem, ut ultricies velit velit@example.io eget lacus. In hac habitasse platea dictumst. Maecenas ac libero in velit consequat interdum. Sed eget nisl vel ipsum hendrerit interdum. Fusce id fermentum lacus, ut pulvinar felis. Sed efficitur aliquam nulla, eget convallis neque@example.biz.'))
+text_input = str(input('Type you text: '))
+extracted_emails = extract_email_addresses(text_input)
+print(extracted_emails)
