@@ -1,3 +1,6 @@
+"""
+CIKLAI WHILE FOR
+"""
 # a = 5
 # b = 5
 # if a == b:
@@ -105,7 +108,5 @@ print(number_list)
 print(sum(number_list) / len(number_list))
 
 
-
 # numbers_list = list(map(int, any_numbers.split()))
 # print(numbers_list)
-
