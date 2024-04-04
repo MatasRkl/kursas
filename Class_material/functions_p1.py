@@ -87,11 +87,64 @@
 """
 
 
-def extract_email_addresses(long_text: str):
-    divided_text = long_text.split()
-    email_adresses = [word for word in divided_text if '@' in word and '.' in word]
-    return email_adresses
+# def extract_email_addresses(long_text: str):
+#     divided_text = long_text.split()
+#     email_adresses = [word for word in divided_text if '@' in word and '.' in word]
+#     return email_adresses
+#
+# text_input = str(input('Type you text: '))
+# extracted_emails = extract_email_addresses(text_input)
+# print(extracted_emails)
 
-text_input = str(input('Type you text: '))
-extracted_emails = extract_email_addresses(text_input)
-print(extracted_emails)
+"""
+Sukurkite žaidimą bulius/karvė. Žaidimo taisykles:
+1. Yra sugeneruojami random pagalba 4 skaiciai (nuo 0000 iki 9999).
+2. Tada paprasoma konsoleje suvesti kiek bandymų spėti turime. (Tarkim vartotojas suves 3 kartus)
+3. Vartotojo prasoma meginsti atspeti skaiciu (pvz vartotojas speja 0123).
+4. Sistema skaiciuoja kiek skaiciu yra karvių, ir kiek yra bulių. Karve yra toks skaicius, kuris yra teisingas,
+ bet stovi ne savo vietoje, bulius – ir teisingas, ir teisingoje vietoje. Jei visi buliai – zaidimo pabaiga.
+5. Jei skaicius neatspetas per nustatyta bandymu skaiciu – zaidimas pralostas.
+ 
+Pvz kompiuris sugeneruoja 0839.
+Vartotojas speja 3 kartus:
+0914 -> 1 bulius,1 karve,
+0849 -> 3 buliai, 1 karve,
+0839 -> 4 buliai, game over.
+"""
+
+# import random
+#
+#
+# def generate_random_number():
+#     return str(random.randint(0, 9999)).zfill(4)
+#
+#
+# def count_bulls_and_cows(secret_number, guess):
+#     bulls = sum(secret_digit == guess_digit for secret_digit, guess_digit in zip(secret_number, guess))
+#
+#     secret_set = set(secret_number)
+#     guess_set = set(guess)
+#
+#     cows = sum(min(secret_number.count(digit), guess.count(digit)) for digit in secret_set & guess_set) - bulls
+#
+#     return bulls, cows
+#
+#
+# the_number = generate_random_number()
+# max_guesses = int(input('Type your max guess count: '))
+# attempts = 0
+#
+# while attempts < max_guesses:
+#     guess = str(input('Type your guess that has !!4 digits!!: '))
+#
+#     bulls, _ = count_bulls_and_cows(the_number, guess)
+#     print(f"Bulls: {bulls}")
+#
+#     if bulls == 4:
+#         print('CORRECT')
+#         break
+#
+#     attempts += 1
+#
+# if attempts == max_guesses:
+#     print('You wasted your guesses')
