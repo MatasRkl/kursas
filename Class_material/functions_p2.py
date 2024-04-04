@@ -88,3 +88,12 @@ def repeator(st, num):
     return st * num
 
 print(repeator('CODE ME ', 5))
+
+"""
+Lambda function
+"""
+
+def multiply(x: int,y: int) -> int:
+    return * y
+
+print(multiply(2,3))
