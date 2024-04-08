@@ -43,19 +43,19 @@ Nepriklausomai nuo to, ar dalijimas pavyko, ar ne, turėtų būti išspausdintas
 """
 
 
-# def divide_two_numbers(dividend: int, divisor: int):
-#     try:
-#         quotient = dividend / divisor
-#         print(f'Result = {quotient}')
-#     except ZeroDivisionError:
-#         print('Divisor is zero; Division is impossible')
-#     except TypeError:
-#         print('You must type in integers')
-#
-#     print("Attempted division")
-#
-#
-# print(divide_two_numbers('5', 0))
+def divide_two_numbers(dividend: int, divisor: int):
+    try:
+        quotient = dividend / divisor
+        print(f'Result = {quotient}')
+    except ZeroDivisionError:
+        print('Divisor is zero; Division is impossible')
+    except TypeError:
+        print('You must type in integers')
+
+    print("Attempted division")
+
+
+print(divide_two_numbers('5', 0))
 
 
 """
@@ -64,35 +64,35 @@ Nepriklausomai nuo to, ar dalijimas pavyko, ar ne, turėtų būti išspausdintas
 """
 
 
-def calculator():
-    try:
-        number1 = int(input('Type your first number: '))
-        number2 = int(input('Type your second number: '))
-
-        if not isinstance(number1, int) or not isinstance(number2, int):
-            raise TypeError('not integers')
-
-        if number2 == 0:
-            raise ZeroDivisionError('Divisor is zero; Division is impossible')
-
-
-        n1_n2_sum = number1 + number2
-        print(f'Sum: {n1_n2_sum}')
-        n1_n2_diff = number1 - number2
-        print(f'Dif: {n1_n2_diff}')
-        n1_n2_division = number1 / number2
-        print(f'Answer: {n1_n2_division}')
-        n1_n2_multiply = number1 * number2
-        print(f'Sum: {n1_n2_multiply}')
-    except TypeError as t:
-        print(t)
-    except ZeroDivisionError as e:
-        print(e)
-    except ValueError:
-        print('Dont write both numbers in one input please')
-
-
-calculator()
+# def calculator():
+#     try:
+#         number1 = int(input('Type your first number: '))
+#         number2 = int(input('Type your second number: '))
+#
+#         if not isinstance(number1, int) or not isinstance(number2, int):
+#             raise TypeError('not integers')
+#
+#         if number2 == 0:
+#             raise ZeroDivisionError('Divisor is zero; Division is impossible')
+#
+#
+#         n1_n2_sum = number1 + number2
+#         print(f'Sum: {n1_n2_sum}')
+#         n1_n2_diff = number1 - number2
+#         print(f'Dif: {n1_n2_diff}')
+#         n1_n2_division = number1 / number2
+#         print(f'Answer: {n1_n2_division}')
+#         n1_n2_multiply = number1 * number2
+#         print(f'Sum: {n1_n2_multiply}')
+#     except TypeError as t:
+#         print(t)
+#     except ZeroDivisionError as e:
+#         print(e)
+#     except ValueError:
+#         print('Dont write both numbers in one input please')
+#
+#
+# calculator()
 
 """
 4. Atnaujinkite ankstesnę užduotį su galimomis raise išimtimis.^^^^^^^^^^^
