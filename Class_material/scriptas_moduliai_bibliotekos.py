@@ -128,7 +128,7 @@ Sukurkite funkciją, kuri perkelia failą iš vieno katalogo į kitą.
 Sukurkite funkciją, kuri ištrina failą.
 """
 
-import os
+# import os
 
 # os.listdir(...)
 # os.mkdir(...)
