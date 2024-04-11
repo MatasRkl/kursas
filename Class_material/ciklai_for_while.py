@@ -99,13 +99,13 @@ ctrl+click=nuvedimas i funkcija
 # print(number_list)
 # print(sum(number_list) / len(number_list))
 
-number_list = []
-any_numbers = input('Write numbers separated by spaces: ')
-for x in any_numbers.split():
-    number_list.append(int(x))
-
-print(number_list)
-print(sum(number_list) / len(number_list))
+# number_list = []
+# any_numbers = input('Write numbers separated by spaces: ')
+# for x in any_numbers.split():
+#     number_list.append(int(x))
+#
+# print(number_list)
+# print(sum(number_list) / len(number_list))
 
 
 # numbers_list = list(map(int, any_numbers.split()))
