@@ -69,4 +69,5 @@ andorra = Country("Andorra", 76098, 468)
 australia.is_big ➞ True
 andorra.is_big ➞ False
 andorra.compare_pd(australia) ➞ "Andorra has a larger population density than Australia"
+SPRENDIMAS "classes'
 """
