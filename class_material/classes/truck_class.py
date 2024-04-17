@@ -1,13 +1,15 @@
 from datetime import datetime, timedelta
 from transport_class import Transport
+from driver_class import Driver
 
 
 class Truck(Transport):
     def __init__(self, range_per_year: int, plate_number: str, fuel_type: str, expenses: int, inspection: str,
                  driving_categories: str, fuel_consumption: int, insurance_date: str, load_capacity: int,
-                 trailer_function: str):
+                 trailer_function: str, trailer_load_capacity: int):
         super().__init__(range_per_year, plate_number, fuel_type, expenses, inspection, driving_categories,
                          fuel_consumption, insurance_date)
+        self.trailer_load_capacity = trailer_load_capacity
         self.trailer_function = trailer_function
         self.load_capacity = load_capacity
 
@@ -32,3 +34,37 @@ class Truck(Transport):
         total_cost = fuel_cost + fixed_costs
 
         return total_cost
+
+    def count_how_many_trips(self, weight: int):
+        total_weight = weight
+
+        if self.trailer_function == "Attachable":
+            trips_with_trailer = total_weight // (self.load_capacity + self.trailer_load_capacity)
+            remainder = total_weight % (self.load_capacity + self.trailer_load_capacity)
+            trips_without_trailer = 1 if remainder > 0 else 0
+            total_trips = trips_with_trailer + trips_without_trailer
+        else:
+            total_trips = total_weight // self.load_capacity
+            remainder = total_weight % self.load_capacity
+            if remainder > 0:
+                total_trips += 1
+
+        return total_trips
+
+    @staticmethod
+    def can_driver_drive_truck_with_trailer():
+        if 'E' in driver.driving_categories:
+            return 'Can'
+        else:
+            return 'Cant'
+
+
+driver = Driver('2024-05-10', ['B', 'D', 'E'], 2)
+
+truck = Truck(100, 'ASD567', 'Gas', 0, '2024-05-09',
+              'B, C', 10,
+              '2024-05-09', 10, 'Attachable',
+              5)
+
+print(truck.count_how_many_trips(45))
+print(truck.can_driver_drive_truck_with_trailer())

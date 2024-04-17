@@ -35,7 +35,8 @@ class Bus(Transport):
         buses_needed = passengers / self.passenger_seats
         return print(f'You well need {buses_needed} to export these passengers')
 
-    def calculate_total_fare(self, passengers: int, distance: int, fare_per_km_per_passenger: float):
+    @staticmethod
+    def calculate_total_fare(passengers: int, distance: int, fare_per_km_per_passenger: float):
 
         total_fare = passengers * distance * fare_per_km_per_passenger
 
