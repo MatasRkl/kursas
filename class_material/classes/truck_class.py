@@ -63,8 +63,8 @@ driver = Driver('2024-05-10', ['B', 'D', 'E'], 2)
 
 truck = Truck(100, 'ASD567', 'Gas', 0, '2024-05-09',
               'B, C', 10,
-              '2024-05-09', 10, 'Attachable',
+              '2024-05-09', 12, 'Attachable',
               5)
 
-print(truck.count_how_many_trips(45))
+print(truck.count_how_many_trips(18))
 print(truck.can_driver_drive_truck_with_trailer())
