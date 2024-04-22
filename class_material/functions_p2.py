@@ -68,11 +68,11 @@ print(can_find(["at", "be", "th", "au"], ["beautiful", "the", "hat"]))
 
 
 def string_starts_with_vowel(lst1: [str]):
-    vowels = 'AEIOUYaeiouy'
+    vowels = "AEIOUYaeiouy"
     return [word for word in lst1 if word[0] in vowels]
 
 
-print(string_starts_with_vowel(['Apple', 'tiger']))
+print(string_starts_with_vowel(["Apple", "tiger"]))
 
 """
 5. Sukurkite lambda funkciją, kuri:
@@ -87,13 +87,16 @@ grąžina naują eilutę, kuri pakartoja pradinę eilutę tiek kartų, kiek kart
 def repeator(st, num):
     return st * num
 
-print(repeator('CODE ME ', 5))
+
+print(repeator("CODE ME ", 5))
 
 """
 Lambda function
 """
 
-def multiply(x: int,y: int) -> int:
-    return * y
 
-print(multiply(2,3))
+def multiply(x: int, y: int) -> int:
+    return x * y
+
+
+print(multiply(2, 3))

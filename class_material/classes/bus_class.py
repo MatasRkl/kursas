@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
-from transport_class import Transport
+import transport_class
 
 
-class Bus(Transport):
+class Bus(transport_class.Transport):
     def __init__(self, range_per_year: int, plate_number: str, fuel_type: str, expenses: int, inspection: str,
                  driving_categories: str, fuel_consumption: int, insurance_date: str, passenger_seats: int):
         super().__init__(range_per_year, plate_number, fuel_type, expenses, inspection, driving_categories,
