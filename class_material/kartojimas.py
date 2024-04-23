@@ -311,3 +311,18 @@ Prie sukvežimių:
 pridėkime metodą, kuris vertintų vairuotoją ir pagal turimą kategoriją įvertintų ar gali vairuoti mašina su priekaba. 
 Visiems automobiliams turi būti patikrinimas ar vairuotojas gali dirbti (ne atostogauja) 
 """
+
+# def do_something(*args: int, **kwargs: str):
+#     square_sum = sum(number ** 2 for number in args)
+#     print(square_sum)
+#
+#     word_lists_by_length = {}
+#
+#     for key, value in kwargs.items():
+#         key_length = len(value[0])
+#         word_lists_by_length[key_length] = value
+#
+#     for key, value in word_lists_by_length.items():
+#         print(f"Words of length {key}: {value}")
+#
+# print(do_something(5, 7, 8, three = ['cat', 'dog', 'eat'], five = ['drink', 'sleep']))

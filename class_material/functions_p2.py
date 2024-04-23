@@ -8,16 +8,16 @@
 """
 
 
-def puzzle_pieces(lst1, lst2):
-
-    target_sum = lst1[0] + lst2[0]
-    for i in range(1, len(lst1)):
-        if lst1[i] + lst2[i] != target_sum:
-            return False
-    return True
-
-
-print(puzzle_pieces([5, 6, 8, 9], [6, 7, 9, 5]))
+# def puzzle_pieces(lst1, lst2):
+#
+#     target_sum = lst1[0] + lst2[0]
+#     for i in range(1, len(lst1)):
+#         if lst1[i] + lst2[i] != target_sum:
+#             return False
+#     return True
+#
+#
+# print(puzzle_pieces([5, 6, 8, 9], [6, 7, 9, 5]))
 
 
 """
@@ -29,16 +29,16 @@ Sukurkite funkciją, kuri paimtų sveikųjų skaičių sąrašą, atskirai suska
 """
 
 
-def war_of_numbers(numbers):
-    sum_even = sum(number for number in numbers if number % 2 == 0)
-    sum_odd = sum(number for number in numbers if number % 2 != 0)
-    if sum_even > sum_odd:
-        return sum_even - sum_odd
-    else:
-        return sum_odd - sum_even
-
-
-print(war_of_numbers([5, 9, 7, 8, 6]))
+# def war_of_numbers(numbers):
+#     sum_even = sum(number for number in numbers if number % 2 == 0)
+#     sum_odd = sum(number for number in numbers if number % 2 != 0)
+#     if sum_even > sum_odd:
+#         return sum_even - sum_odd
+#     else:
+#         return sum_odd - sum_even
+#
+#
+# print(war_of_numbers([5, 9, 7, 8, 6]))
 
 
 """
@@ -47,19 +47,19 @@ print(war_of_numbers([5, 9, 7, 8, 6]))
 """
 
 
-def can_find(bigrams, words):
-    for bigram in bigrams:
-        found = False
-        for word in words:
-            if bigram in word:
-                found = True
-                break
-        if not found:
-            return False
-    return True
-
-
-print(can_find(["at", "be", "th", "au"], ["beautiful", "the", "hat"]))
+# def can_find(bigrams, words):
+#     for bigram in bigrams:
+#         found = False
+#         for word in words:
+#             if bigram in word:
+#                 found = True
+#                 break
+#         if not found:
+#             return False
+#     return True
+#
+#
+# print(can_find(["at", "be", "th", "au"], ["beautiful", "the", "hat"]))
 
 """
 4. Sukurkite funkciją, kuri priima eilučių sąrašą ir grąžina naują sąrašą,
@@ -67,12 +67,12 @@ print(can_find(["at", "be", "th", "au"], ["beautiful", "the", "hat"]))
 """
 
 
-def string_starts_with_vowel(lst1: [str]):
-    vowels = "AEIOUYaeiouy"
-    return [word for word in lst1 if word[0] in vowels]
-
-
-print(string_starts_with_vowel(["Apple", "tiger"]))
+# def string_starts_with_vowel(lst1: [str]):
+#     vowels = "AEIOUYaeiouy"
+#     return [word for word in lst1 if word[0] in vowels]
+#
+#
+# print(string_starts_with_vowel(["Apple", "tiger"]))
 
 """
 5. Sukurkite lambda funkciją, kuri:
@@ -84,19 +84,52 @@ grąžina naują eilutę, kuri pakartoja pradinę eilutę tiek kartų, kiek kart
 """
 
 
-def repeator(st, num):
-    return st * num
+# def repeator(st, num):
+#     return st * num
+#
+#
+# print(repeator("CODE ME ", 5))
+#
+# """
+# Lambda function
+# """
+#
+#
+# def multiply(x: int, y: int) -> int:
+#     return x * y
+#
+#
+# print(multiply(2, 3))
 
-
-print(repeator("CODE ME ", 5))
 
 """
-Lambda function
+1. Write a Python program to triple all numbers of a given list of integers. Use Python
 """
 
+# list_of_ints = [5, 9, 8, 7, 5]
+# def triple_number():
+#     new = []
+#     for num in list_of_ints:
+#         new.append(num * 3)
+#     return new
+#
+# print(triple_number())
 
-def multiply(x: int, y: int) -> int:
-    return x * y
+"""
+2. Write a Python program to convert a given list of integers and a tuple of integers in a list of strings.
+"""
 
-
-print(multiply(2, 3))
+# tuple_int = (5, 8, 7)
+# list_int = [5, 8, 3]
+#
+# def convert_into_str(first_variable, second_variable):
+#     first_list = list(first_variable)
+#     for i in range(len(first_list)):
+#         first_list[i] = str(first_list[i])
+#     print(list(first_list))
+#
+#     for i in range(len(second_variable)):
+#         second_variable[i] = str(second_variable[i])
+#     print(second_variable)
+#
+# convert_into_str(tuple_int, list_int)

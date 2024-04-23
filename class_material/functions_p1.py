@@ -148,3 +148,77 @@ Vartotojas speja 3 kartus:
 #
 # if attempts == max_guesses:
 #     print('You wasted your guesses')
+
+"""
+1. Write a Python program to find if a given string starts
+with a given character using Lambda. Output:True or False
+"""
+
+# find_out = lambda sentence, char: True if sentence[0] == char else False
+#
+# print(find_out("If we go, we go", 'i'))
+
+"""
+2. Write a Python program to create a lambda function that adds 15 to
+a given number passed in as an argument,
+also create a lambda function that multiplies argument x with argument y and print the result.
+"""
+
+# add = lambda a: a + 15
+# print(add(10))
+#
+# multiply = lambda a, b: a * b
+# print(multiply(5, 6))
+
+"""
+3. Write a Python program to square and cube every number in a given list of integers using Lambda.
+"""
+
+# my_list = [5, 7, 9]
+# squared_cubed_list = list(map(lambda x: (x ** 2, x ** 3), my_list))
+# print(squared_cubed_list)
+
+"""
+4. Write a Python program to extract year, month, date and time using Lambda. Sample Output:
+"""
+
+# from datetime import datetime
+#
+# sample_datetime = datetime.now()
+#
+# extract_info = lambda dt: (dt.year, dt.month, dt.day, dt.time())
+#
+# year, month, day, time = extract_info(sample_datetime)
+#
+# print("Year:", year)
+# print("Month:", month)
+# print("Date:", day)
+# print("Time:", time)
+
+"""
+5. Write a Python program to sort a list of tuples using Lambda
+"""
+
+# sorting_list = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+# sorted_list = sorted(sorting_list, key = lambda x: x[1])
+# print(sorted_list)
+
+"""
+6. Write a Python program to sort a list of dictionaries buy color value using Lambda.
+"""
+
+# list_of_dicts = [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
+#                  {'make': 'Mi Max', 'model': '2', 'color': 'Gold'},
+#                  {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+#
+# sorted_list_of_dicts = sorted(list_of_dicts, key = lambda x: x['color'])
+# print(sorted_list_of_dicts)
+
+"""
+7. Write a Python program to sort a given matrix in ascending order according to the sum of its rows using lambda.
+"""
+
+# lists_in_list = [[1, 2, 3], [2, 4, 5], [1, 1, 1]]
+#
+# sorted_lists = sorted(lists_in_list, key = lambda x: sum(x))
+# print(sorted_lists)

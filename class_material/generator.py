@@ -119,7 +119,7 @@ def filter_below_age(people, age_threshold):
 
 def map_to_uppercase(people):
     for person in people:
-        yield (person[0].upper(),) + person[1:]
+        yield person[0].upper()
 
 
 def calculate_average_salary(people):
