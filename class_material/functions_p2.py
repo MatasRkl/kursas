@@ -116,7 +116,47 @@ grąžina naują eilutę, kuri pakartoja pradinę eilutę tiek kartų, kiek kart
 # print(triple_number())
 
 """
-2. Write a Python program to convert a given list of integers and a tuple of integers in a list of strings.
+2. Write a Python program to square the elements of a list using map() function.
+"""
+
+# numbers_list = [6, 17, 7, 19]
+# squared_elements = list(map(lambda x: x ** 2, numbers_list))
+# print(squared_elements)
+
+"""
+3. Write a Python program to add three given lists using Python map and lambda
+"""
+
+# def add_lists(*args: list[int]):
+#     result = []
+#     [result.append(number) for number in args]
+#     one_list = sum(result, [])
+#     return one_list
+#
+# print(add_lists([5, 7, 8], [8, 9, 10], [8, 4, 6]))
+
+"""
+4. Write a Python program to add two given lists and find the difference between lists. Use map() function.
+"""
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+
+# def find_difference_and_sum(*args: list[int]):
+#     sum_list = [sum(number) for number in args]
+#     absolute_sum = sum(sum_list)
+#
+#     difference = max(sum_list) - min(sum_list)
+#
+#
+#     return f'Sum total of 2 lists is {absolute_sum}\nDifference is {difference}'
+#
+#
+# print(find_difference_and_sum(list1, list2))
+
+"""
+5. Write a Python program to convert a given list of integers and a tuple of integers in a list of strings.
 """
 
 # tuple_int = (5, 8, 7)
@@ -133,3 +173,82 @@ grąžina naują eilutę, kuri pakartoja pradinę eilutę tiek kartų, kiek kart
 #     print(second_variable)
 #
 # convert_into_str(tuple_int, list_int)
+
+"""
+6. Write a Python program to filter a list of integers using Lambda
+"""
+
+# list_of_integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#
+#
+# def filter_integers(lst1: list[int]):
+#     even = filter(lambda x: x % 2 == 0, lst1)
+#     odd = filter(lambda x: x % 2 != 0, lst1)
+#     return list(even), list(odd)
+#
+# print(filter_integers(list_of_integers))
+
+"""
+7. Write a Python program to find numbers divisible
+by nineteen or thirteen from a list of numbers using Lambda
+"""
+
+# list_of_integers = [19, 65, 57, 39, 152, 639, 121, 44, 90, 190]
+#
+#
+# def find_numbers(lst1: list[int]):
+#     divisible_numbers = filter(lambda x: x % 19 == 0 or x % 13 == 0, lst1)
+#     return list(divisible_numbers)
+#
+# print(find_numbers(list_of_integers))
+
+"""
+8. Write a Python program to count the even, odd numbers in a given array of integers using Lambda
+"""
+
+# list_of_integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#
+# def count_even_odd(lst1: list[int]):
+#     even_count = 0
+#     odd_count = 0
+#     even = filter(lambda x: x % 2 == 0, lst1)
+#     odd = filter(lambda x: x % 2 != 0, lst1)
+#
+#     for number in even:
+#         even_count += 1
+#
+#     for number in odd:
+#         odd_count += 1
+#
+#     return f'Even count is {even_count}\nOdd count is {odd_count}'
+#
+#
+# print(count_even_odd(list_of_integers))
+
+from functools import reduce
+
+"""
+9. Write a python program that multiplies all the values in a given list of integers.
+"""
+
+# my_list = [5, 9, 10]
+#
+# def multiply(x, y):
+#     return x * y
+#
+# result = reduce(multiply, my_list)
+# print(result)
+
+"""
+10. Write a python program that finds the maximum value within the given list.
+"""
+
+# my_list = [5, 9, 10]
+#
+# def find_max(lst1, lst2):
+#     return max(lst1, lst2)
+#
+# result = reduce(find_max, my_list)
+#
+# print(result)
+
