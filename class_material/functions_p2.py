@@ -251,4 +251,3 @@ from functools import reduce
 # result = reduce(find_max, my_list)
 #
 # print(result)
-

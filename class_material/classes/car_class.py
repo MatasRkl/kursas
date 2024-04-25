@@ -13,7 +13,7 @@ class Car(Transport):
         current_date = datetime.now()
 
         if current_date + timedelta(days=30) >= insurance_expiry:
-            return "You will need to do bus inspection or get insurance"
+            return "You will need to do car inspection or get insurance"
         else:
             return "None is needed"
 
@@ -29,3 +29,4 @@ class Car(Transport):
         total_cost = fuel_cost + fixed_costs
 
         return total_cost
+
