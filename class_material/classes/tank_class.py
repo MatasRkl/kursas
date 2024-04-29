@@ -11,7 +11,10 @@ class Tank:
         self.target_x = random.randint(0, 9)
         self.target_y = random.randint(0, 9)
         self.board[self.target_y][self.target_x] = 'O'
+        self.points = 200
 
+    def all_shots(self):
+        return sum(self.shots.values())
 
     def display(self):
         display_board = [row[:] for row in self.board]
@@ -26,7 +29,7 @@ class Tank:
         elif self.direction == 'west':
             tank_symbol = '<'
 
-        display_board[len(display_board) - self.y - 1][self.x] = tank_symbol
+        display_board[9 - self.y][self.x] = tank_symbol
 
         for row in display_board:
             print(' '.join(row))
@@ -35,12 +38,16 @@ class Tank:
     def forward(self):
         if self.direction == 'north':
             self.y += 1
+            self.points -= 10
         elif self.direction == 'south':
             self.y -= 1
+            self.points -= 10
         elif self.direction == 'east':
             self.x += 1
+            self.points -= 10
         elif self.direction == 'west':
             self.x -= 1
+            self.points -= 10
 
     def turn_left(self):
         if self.direction == 'north':
@@ -65,37 +72,50 @@ class Tank:
     def back(self):
         if self.direction == 'north':
             self.y -= 1
+            self.points -= 10
         elif self.direction == 'south':
             self.y += 1
+            self.points -= 10
         elif self.direction == 'east':
             self.x -= 1
+            self.points -= 10
         elif self.direction == 'west':
             self.x += 1
+            self.points -= 10
 
     def fire(self):
         self.shots[self.direction] += 1
+        self.hit_count = 0
 
-        if (self.direction == 'north' and self.x == self.target_x and self.y > self.target_y) or \
-                (self.direction == 'south' and self.x == self.target_x and self.y < self.target_y) or \
-                (self.direction == 'east' and self.y == self.target_y and self.x > self.target_x) or \
-                (self.direction == 'west' and self.y == self.target_y and self.x < self.target_x):
+        if (self.direction == 'north' and self.x == self.target_x and 9 - self.y > self.target_y) or \
+                (self.direction == 'south' and self.x == self.target_x and 9 - self.y < self.target_y) or \
+                (self.direction == 'east' and 9 - self.y == self.target_y and self.x < self.target_x) or \
+                (self.direction == 'west' and 9 - self.y == self.target_y and self.x > self.target_x):
             print("Target hit!")
-
+            self.hit_count += 1
+            self.points += 50
             self.board[self.target_y][self.target_x] = '_'
-
             self.target_x = random.randint(0, 9)
             self.target_y = random.randint(0, 9)
             self.board[self.target_y][self.target_x] = 'O'
         else:
             print("Missed the target!")
 
+    def info(self):
+        print('Tanks is facing: ', self.direction)
+        print('Tanks coordinates are: ', self.x, self.y)
+        print('Tanks shots in directions: ', self.shots)
+        print('All shots: ', self.all_shots())
 
 tank_game = Tank()
 
 while True:
     tank_game.display()
     action = input('Type your action (forward, back, turn left, turn right, FIRE, info, end): ')
+    print('Your points: ', tank_game.points)
     if action == 'end':
+        print('You destroyed ', tank_game.hit_count, ' targets')
+        name = input('Type your name you monster: ')
         break
     elif action == 'forward':
         tank_game.forward()
@@ -107,3 +127,5 @@ while True:
         tank_game.back()
     elif action == 'FIRE':
         tank_game.fire()
+    elif action == 'info':
+        tank_game.info()
