@@ -19,7 +19,6 @@ class Budget:
         expenses = Record('Expenses', sum_1)
         self.journal.append(expenses)
 
-
     def get_balance(self):
         balance = 0
         for record in self.journal:
