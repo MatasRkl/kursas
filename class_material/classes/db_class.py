@@ -59,6 +59,10 @@ class DB:
         data = self.cursor.fetchall()
         return data
 
+    def delete_row_from_db(self, table, condition):
+        sql_query = f"DELETE FROM {table} WHERE {condition}"
+        self.execute_sql_query(sql_query)
+
 
     def drop_tables_if_exist(self, table):
         sql_query = f"Drop table if exists {table}"
